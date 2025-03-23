@@ -19,6 +19,32 @@ class SensorController
         $result = $this->sensor->getSensorAll();
         $this->sendResponseFromResult($result);
     }
+
+    public function getSensorByDate($date)
+    {
+      $result = $this->sensor->getSensorByDate($date);
+      $this->sendResponseFromResult($result);   
+    }
+
+    public function getSensorAllByDateAndBetweenTime($date, $start_time,$end_time)
+    {
+      $result = $this->sensor->getSensorAllByDateAndBetweenTime($date, $start_time,$end_time);
+      $this->sendResponseFromResult($result);   
+    }
+
+    public function getSensorAllByBetweenDate($start_date, $end_date)
+    {
+      $result = $this->sensor->getSensorAllByBetweenDate($start_date, $end_date);
+      $this->sendResponseFromResult($result);
+    }
+
+    public function getSensorTempByDate($date)
+    {
+      $result = $this->sensor->getSensorTempByDate($date);
+      $this->sendResponseFromResult($result);
+    }
+
+
     //ใช้ในกรณีที่ส่งมามีค่ามากกว่า 1 รายการ/แถว/เรคอร์ด/ช้อมูล
     private function sendResponseFromResult($result) {
         $num = $result->rowCount();

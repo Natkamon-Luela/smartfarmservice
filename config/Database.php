@@ -16,5 +16,5 @@ class Database {
         }
         return $this->conn;
     }
-}
+}//มักจะไม่แก้ไข
 ?>

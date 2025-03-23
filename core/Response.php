@@ -5,5 +5,5 @@ class Response {
         echo json_encode($data);
         exit;
     }
-}
+}//มักจะไม่แก้ไข
 ?>
